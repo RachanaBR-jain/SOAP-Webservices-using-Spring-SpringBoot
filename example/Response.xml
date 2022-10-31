@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GetCourseDetailsResponse xmlns="http://practice.soapWebservices.com/courses">
+<GetCourseDetailsResponse xmlns="http://practice.soapWebservices.com/courses"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://practice.soapWebservices.com/courses course-details.xsd"
+>
 	<CourseDetails>
-	<id>125</id>
+	<id>126</id>
 	<name>Spring </name>
 	<description>learn basics of Spring framework</description>
 	</CourseDetails>
