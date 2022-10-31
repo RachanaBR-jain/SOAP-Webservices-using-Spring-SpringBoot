@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetCourseDetailsRequest xmlns="http://practice.soapWebservices.com/courses">
+<id>123</id> <!-- only number must be allowed to have restrition on xml tag we must xsd -->
+</GetCourseDetailsRequest>
