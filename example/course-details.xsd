@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://practice.soapWebservices.com/courses"
+	xmlns:tns="http://practice.soapWebservices.com/courses"
+	elementFormDefault="qualified">
+	<element name="GetCourseDetailsRequest">
+		<complexType>
+			<sequence>
+				<element name="id" type="integer"></element>
+			</sequence>
+		</complexType>
+	</element>
+	</schema>
+
+	
+<!-- <GetCourseDetailsRequest xmlns="http://practice.soapWebservices.com/courses"> 
+	<id>123</id> </GetCourseDetailsRequest> -->
