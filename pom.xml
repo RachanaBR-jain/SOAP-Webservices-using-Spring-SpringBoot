@@ -49,6 +49,28 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- adding jaxb2 plugin -->
+			<!-- XSD source folder(${project.basedir}/src/main/resources) -->
+			<!-- java class source folder (${project.basedir}/src/main/java) -->
+			<!--  clear folder if we don't provide this it will delete all the files from java path -->
+			 <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>jaxb2-maven-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+                <execution>
+                    <id>xjc</id>
+                    <goals>
+                        <goal>xjc</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>
+                <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                <cleanOutputDir>false</cleanOutputDir>
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 	<repositories>
