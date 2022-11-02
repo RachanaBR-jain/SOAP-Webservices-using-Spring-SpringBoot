@@ -1,22 +1,16 @@
-creating endpoint url
-Steps:
-@Endpoint -to make the class name to be used as endpoint URL(which accept the request and sends the request)
-Create CourseDetailsEndpoint.java with method which takes input as request object and output as response object.
+Message Dispatcher Servlet:
+Setps:
+1)Spring configuration by using @Configuration
+2)Enable Spring WebService configuration using @EnableWs
 
-@Endpoint
-public class CourseDetailsEndpoint {
-	//create method which takes input as request object and output as response object
-	//@payloadRoot will accept the  http://practice.soapWebservices.com/course with GetCourseDetailsRequest
-	//@RequestPayload will convert GetCourseDetailsRequest xml to java object
-	//@ResponsePayload will covert java opject response to xml type
-	
-	@PayloadRoot(namespace="http://practice.soapWebservices.com/course",localPart = "GetCourseDetailsRequest") 
-	@ResponsePayload
-	public GetCourseDetailsResponse name(@RequestPayload GetCourseDetailsRequest request) {
-		GetCourseDetailsResponse response = new GetCourseDetailsResponse();
-		CourseDetails courseDetails = new CourseDetails();
-		courseDetails.setId(request.getId());
-		courseDetails.setName("Microservices Course");
-		courseDetails.setDescription("Learn and upskill-its a wonderfull course!");
-		return response;
-		
+Dispatcher -
+*is the front Contoller 
+*all the request will first come to Dispatcher servlet
+*it will indentify which Contoller can handle the request
+
+MessageDispatcherServlet:
+It will handle all the SOAP request and identify the endpoint
+Servlet for simplified dispatching of Web service messages. 
+This servlet is a convenient alternative to the standard Spring-MVC DispatcherServlet 
+with separate WebServiceMessageReceiverHandlerAdapter, MessageDispatcher, and WsdlDefinitionHandlerAdapterinstances. 
+This servlet automatically detects EndpointAdapters, EndpointMappings, and EndpointExceptionResolvers by type. 
