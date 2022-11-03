@@ -1,13 +1,17 @@
-package com.practice.webservice.soap.soapcoursemanagement.soap;
+package com.practice.courses.webservice.soap.soapcoursemanagement.soap;
+
+
 
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import com.soapwebservices.practice.courses.CourseDetails;
-import com.soapwebservices.practice.courses.GetCourseDetailsRequest;
-import com.soapwebservices.practice.courses.GetCourseDetailsResponse;
+import com.practice.courses.CourseDetails;
+import com.practice.courses.GetCourseDetailsRequest;
+import com.practice.courses.GetCourseDetailsResponse;
+
+
 
 @Endpoint
 public class CourseDetailsEndpoint {
@@ -16,7 +20,7 @@ public class CourseDetailsEndpoint {
 	//@RequestPayload will convert GetCourseDetailsRequest xml to java object
 	//@ResponsePayload will covert java opject response to xml type
 	
-	@PayloadRoot(namespace="http://practice.soapWebservices.com/course",localPart = "GetCourseDetailsRequest") 
+	@PayloadRoot(namespace="http://practice.com/courses",localPart = "GetCourseDetailsRequest") 
 	@ResponsePayload
 	public GetCourseDetailsResponse name(@RequestPayload GetCourseDetailsRequest request) {
 		GetCourseDetailsResponse response = new GetCourseDetailsResponse();
@@ -24,6 +28,7 @@ public class CourseDetailsEndpoint {
 		courseDetails.setId(request.getId());
 		courseDetails.setName("Microservices Course");
 		courseDetails.setDescription("Learn and upskill-its a wonderfull course!");
+		response.setCourseDetails(courseDetails);
 		return response;
 		
 	}

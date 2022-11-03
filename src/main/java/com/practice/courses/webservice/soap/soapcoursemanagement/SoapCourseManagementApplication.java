@@ -1,4 +1,5 @@
-package com.practice.webservice.soap.soapcoursemanagement;
+package com.practice.courses.webservice.soap.soapcoursemanagement;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

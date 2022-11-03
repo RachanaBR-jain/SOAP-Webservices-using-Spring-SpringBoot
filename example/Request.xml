@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GetCourseDetailsRequest xmlns="http://practice.soapWebservices.com/courses"
-xsi:schemaLocation="http://practice.soapWebservices.com/courses courseDetails.xsd"
+<GetCourseDetailsRequest xmlns="http://practice.com/courses"
+xsi:schemaLocation="http://practice.com/courses courseDetails.xsd"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<id>1234</id>
+<id>123</id>
 </GetCourseDetailsRequest>
